@@ -14,9 +14,12 @@ public class Suspension : MonoBehaviour
     [SerializeField] private float wheelRadius = 0.35f;
 
     [Header("Steering Settings")]
-    [SerializeField] private float frontTireGrip = 0.8f;
-    [SerializeField] private float backTireGrip = 0.4f;
-    [SerializeField] private float tireMass = 20f;
+    [SerializeField] private float frontTireGrip = 0.6f;   // og 0.95
+    [SerializeField] private float backTireGrip = 0.4f;    // og 0.90
+    [SerializeField] private float driftFrontGrip = 0.35f; // og 0.70
+    [SerializeField] private float driftBackGrip = 0.05f;  // og 0.15
+    [SerializeField] private float tireMass = 40f;  
+    
     [SerializeField] private float maxSteerAngle = 35f;
     [SerializeField] private float steerTorqueStrength = 12f;
     [SerializeField] private float steerSpeed = 360f;
@@ -26,8 +29,9 @@ public class Suspension : MonoBehaviour
     [SerializeField] private float reverseAccel = 10f;
     [SerializeField] private float maxSpeed = 50f;
 
-    [Header("Air Gravity")]
+    [Header("Air Gravity / Downforce")]
     [SerializeField] private float airborneGravityMultiplier = 2f;
+    [SerializeField] private float downforceValue = 15f;
 
     private float speedInput, turnInput, drive;
     private Rigidbody rb;
@@ -35,7 +39,7 @@ public class Suspension : MonoBehaviour
     private float[] wheelSpinAngles;
 
     private bool isGrounded;
-
+    private bool isDrifting;
 
 
     void Awake()
@@ -57,7 +61,7 @@ public class Suspension : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.centerOfMass = new Vector3(0, -0.6f, 0);
+        rb.centerOfMass = new Vector3(0, -1.5f, 0);
 
         wheelSpinAngles = new float[wheels.Length];
     }
@@ -66,6 +70,7 @@ public class Suspension : MonoBehaviour
     void Update()
     {
         drive = controls.Player.Drive.ReadValue<float>();
+        isDrifting = controls.Player.DriftHandBrake.ReadValue<float>() > 0.1f;
         turnInput = controls.Player.Steer.ReadValue<float>();
 
         if (drive > 0f)
@@ -161,6 +166,8 @@ public class Suspension : MonoBehaviour
                 Vector3.up * steerTorque,
                 ForceMode.Acceleration
             );
+            Vector3 downforceVector = -transform.up * Mathf.Abs(forwardSpeed) * downforceValue;
+            rb.AddForce(downforceVector, ForceMode.Force);
         }
     }
 
@@ -201,7 +208,7 @@ public class Suspension : MonoBehaviour
             );
 
 
-            float grip = isFrontWheel ? frontTireGrip : backTireGrip;
+            float grip = isDrifting ? isFrontWheel ? driftFrontGrip : driftBackGrip : isFrontWheel ? frontTireGrip : backTireGrip;
 
 
             Vector3 vehicleVelocity = rb.GetPointVelocity(wheel.position);
@@ -245,11 +252,22 @@ public class Suspension : MonoBehaviour
 
             float targetAccel = velocityChange / Time.fixedDeltaTime;
 
+            Vector3 sidewaysForceDirection = wheelDirection;
+            sidewaysForceDirection.y = 0f; 
+            sidewaysForceDirection.Normalize();
+
 
             rb.AddForceAtPosition(
-                wheelDirection * targetAccel * tireMass,
+                sidewaysForceDirection * targetAccel * tireMass,
                 wheel.position
             );
+
+            // rb.AddForceAtPosition(
+            //     wheelDirection * targetAccel * tireMass,
+            //     wheel.position
+            // );
+
+
 
             visual.position = wheel.position + suspensionDown * springLength;
             return true;

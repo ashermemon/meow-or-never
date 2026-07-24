@@ -200,17 +200,6 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""5fe53991-2b18-446d-b841-7ea97a543220"",
-                    ""path"": ""<Keyboard>/shift"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Drift/HandBrake"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""052e056a-5a3d-4653-ad7c-6ad155af80db"",
                     ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",

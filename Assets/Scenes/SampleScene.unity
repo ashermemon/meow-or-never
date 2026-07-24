@@ -1359,20 +1359,23 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   restLength: 0.6
-  springTravel: 0.25
-  springStiffness: 45000
-  damperStiffness: 3500
+  springTravel: 0.4
+  springStiffness: 95000
+  damperStiffness: 12000
   wheelRadius: 0.35
-  frontTireGrip: 0.3
-  backTireGrip: 0.05
-  tireMass: 20
-  maxSteerAngle: 35
+  frontTireGrip: 0.6
+  backTireGrip: 0.4
+  driftFrontGrip: 0.35
+  driftBackGrip: 0.05
+  tireMass: 25
+  maxSteerAngle: 20
   steerTorqueStrength: 12
-  steerSpeed: 360
+  steerSpeed: 120
   forwardAccel: 25
   reverseAccel: 10
   maxSpeed: 50
   airborneGravityMultiplier: 2
+  downforceValue: 1000
 --- !u!1001 &1406879724
 PrefabInstance:
   m_ObjectHideFlags: 0
