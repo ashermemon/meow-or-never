@@ -37,6 +37,7 @@ public class Suspension : MonoBehaviour
     private bool isGrounded;
 
 
+
     void Awake()
     {
         controls = new InputSystem_Actions();
