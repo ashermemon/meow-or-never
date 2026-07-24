@@ -1363,10 +1363,10 @@ MonoBehaviour:
   springStiffness: 95000
   damperStiffness: 12000
   wheelRadius: 0.35
-  frontTireGrip: 0.6
-  backTireGrip: 0.4
-  driftFrontGrip: 0.35
-  driftBackGrip: 0.05
+  frontTireGrip: 0.3
+  backTireGrip: 0.2
+  driftFrontGrip: 0.15
+  driftBackGrip: 0.02
   tireMass: 25
   maxSteerAngle: 20
   steerTorqueStrength: 12
