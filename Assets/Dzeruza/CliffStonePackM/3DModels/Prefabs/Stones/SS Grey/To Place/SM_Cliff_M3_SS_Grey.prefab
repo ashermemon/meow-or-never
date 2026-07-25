@@ -92,6 +92,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: 5b4f48b957aa672449aeecf759c4ef96, type: 3}
+      propertyPath: m_LODs.Array.data[0].screenRelativeHeight
+      value: 0.5007361
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: 5b4f48b957aa672449aeecf759c4ef96, type: 3}
+      propertyPath: m_LODs.Array.data[1].screenRelativeHeight
+      value: 0.3021551
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: 5b4f48b957aa672449aeecf759c4ef96, type: 3}
+      propertyPath: m_LODs.Array.data[2].screenRelativeHeight
+      value: 0.19697203
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: 5b4f48b957aa672449aeecf759c4ef96, type: 3}
+      propertyPath: m_LODs.Array.data[3].screenRelativeHeight
+      value: 0.10041192
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: 5b4f48b957aa672449aeecf759c4ef96, type: 3}
+      propertyPath: m_LODs.Array.data[4].screenRelativeHeight
+      value: 0.050162133
+      objectReference: {fileID: 0}
     - target: {fileID: 5517989450320755888, guid: 5b4f48b957aa672449aeecf759c4ef96, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -112,38 +132,8 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: -8086429394231647596, guid: 5b4f48b957aa672449aeecf759c4ef96, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: -5400827657280199304, guid: 5b4f48b957aa672449aeecf759c4ef96, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6126524423878938659}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b4f48b957aa672449aeecf759c4ef96, type: 3}
---- !u!1 &7079570574400765782 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -5400827657280199304, guid: 5b4f48b957aa672449aeecf759c4ef96, type: 3}
-  m_PrefabInstance: {fileID: 6283586021846309422}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &6126524423878938659
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7079570574400765782}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 139.9, y: 117.3, z: 162.7}
-  m_Center: {x: 0.8907814, y: 1.4743443, z: -1.716053}

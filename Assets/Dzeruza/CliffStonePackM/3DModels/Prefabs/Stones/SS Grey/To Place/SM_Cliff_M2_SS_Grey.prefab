@@ -100,6 +100,26 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: 696d8f7a0daee0a4d8adcd17e8482503, type: 3}
+      propertyPath: m_LODs.Array.data[0].screenRelativeHeight
+      value: 0.5049613
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: 696d8f7a0daee0a4d8adcd17e8482503, type: 3}
+      propertyPath: m_LODs.Array.data[1].screenRelativeHeight
+      value: 0.29563585
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: 696d8f7a0daee0a4d8adcd17e8482503, type: 3}
+      propertyPath: m_LODs.Array.data[2].screenRelativeHeight
+      value: 0.19962934
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: 696d8f7a0daee0a4d8adcd17e8482503, type: 3}
+      propertyPath: m_LODs.Array.data[3].screenRelativeHeight
+      value: 0.10423846
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: 696d8f7a0daee0a4d8adcd17e8482503, type: 3}
+      propertyPath: m_LODs.Array.data[4].screenRelativeHeight
+      value: 0.050162133
+      objectReference: {fileID: 0}
     - target: {fileID: 7218908911185073765, guid: 696d8f7a0daee0a4d8adcd17e8482503, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647

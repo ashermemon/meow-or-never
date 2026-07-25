@@ -88,6 +88,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: 5662105606314274896920c7a759f385, type: 3}
+      propertyPath: m_LODs.Array.data[0].screenRelativeHeight
+      value: 0.5007361
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: 5662105606314274896920c7a759f385, type: 3}
+      propertyPath: m_LODs.Array.data[1].screenRelativeHeight
+      value: 0.3021551
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: 5662105606314274896920c7a759f385, type: 3}
+      propertyPath: m_LODs.Array.data[2].screenRelativeHeight
+      value: 0.20230438
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: 5662105606314274896920c7a759f385, type: 3}
+      propertyPath: m_LODs.Array.data[3].screenRelativeHeight
+      value: 0.10231632
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742473837712756890, guid: 5662105606314274896920c7a759f385, type: 3}
+      propertyPath: m_LODs.Array.data[4].screenRelativeHeight
+      value: 0.046851564
+      objectReference: {fileID: 0}
     - target: {fileID: 6014488204778275319, guid: 5662105606314274896920c7a759f385, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
