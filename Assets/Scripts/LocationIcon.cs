@@ -20,7 +20,7 @@ public class LocationIcon : MonoBehaviour
     void Update()
     {
   
-        transform.Rotate(0f, 0f, rotationSpeed * Time.deltaTime, Space.Self);
+        transform.Rotate(rotationSpeed * Time.deltaTime, 0f, 0f, Space.Self);
 
         float newY = startPosition.y + Mathf.Sin(Time.time * hoverSpeed) * hoverAmount;
         
