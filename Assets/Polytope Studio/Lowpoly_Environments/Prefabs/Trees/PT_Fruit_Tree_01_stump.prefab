@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7622724856221292152}
+  - component: {fileID: 7774390451640259477}
   - component: {fileID: 6802265350786472413}
   - component: {fileID: 8755691476161375511}
   - component: {fileID: 2509451095767794499}
@@ -34,6 +35,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!205 &7774390451640259477
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7098389285256826050}
+  serializedVersion: 3
+  m_LocalReferencePoint: {x: -0.033596873, y: 0.16585454, z: -0.05133146}
+  m_Size: 1.2378002
+  m_FadeMode: 1
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.027743889
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 8755691476161375511}
+  - screenRelativeHeight: 0.027743889
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 8755691476161375511}
+  - screenRelativeHeight: 0.027743889
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 8755691476161375511}
+  m_Enabled: 1
+  m_GlobalIlluminationLOD: 0
 --- !u!33 &6802265350786472413
 MeshFilter:
   m_ObjectHideFlags: 0
