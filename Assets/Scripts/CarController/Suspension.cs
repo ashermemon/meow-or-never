@@ -33,6 +33,8 @@ public class Suspension : MonoBehaviour
     [SerializeField] private float airborneGravityMultiplier = 2f;
     [SerializeField] private float downforceValue = 15f;
 
+    public GameObject tireTrail;
+
     private float speedInput, turnInput, drive;
     private Rigidbody rb;
     private InputSystem_Actions controls;
@@ -41,6 +43,12 @@ public class Suspension : MonoBehaviour
     private bool isGrounded;
     private bool isDrifting;
 
+// private bool isSteering;
+
+    public TrailRenderer FRWheel;
+    public TrailRenderer FLWheel;
+    public TrailRenderer BRWheel;
+    public TrailRenderer BLWheel;
 
     void Awake()
     {
@@ -73,6 +81,8 @@ public class Suspension : MonoBehaviour
         isDrifting = controls.Player.DriftHandBrake.ReadValue<float>() > 0.1f;
         turnInput = controls.Player.Steer.ReadValue<float>();
 
+        HandleTrails(isDrifting && isGrounded);
+
         if (drive > 0f)
         {
             speedInput = drive * forwardAccel;
@@ -87,7 +97,13 @@ public class Suspension : MonoBehaviour
         }
     }
 
-
+    private void HandleTrails(bool emit)
+    {
+        if (FRWheel != null) {FRWheel.emitting = emit;}
+        if (FLWheel != null) {FLWheel.emitting = emit;}
+        if (BRWheel != null) {BRWheel.emitting = emit;}
+        if (BLWheel != null) {BLWheel.emitting = emit;}
+    }
     void FixedUpdate()
     {
         int groundedWheels = 0;
@@ -127,7 +143,7 @@ public class Suspension : MonoBehaviour
                 );
             }
 
-
+            SnapTrailsToHills(wheels[i], i);
             float spinDelta = (forwardSpeed / wheelRadius) * Time.fixedDeltaTime * Mathf.Rad2Deg;
             wheelSpinAngles[i] += spinDelta;
         }
@@ -170,6 +186,29 @@ public class Suspension : MonoBehaviour
             rb.AddForce(downforceVector, ForceMode.Force);
         }
     }
+
+void SnapTrailsToHills(Transform wheel, int index)
+{
+ 
+    if (Physics.Raycast(wheel.position + (transform.up * 0.5f), -transform.up, out RaycastHit hit, 2f, groundLayer))
+    {
+       
+        TrailRenderer currentTrail = null;
+        if (index == 0) currentTrail = FRWheel;
+        else if (index == 1) currentTrail = FLWheel;
+        else if (index == 2) currentTrail = BRWheel;
+        else if (index == 3) currentTrail = BLWheel;
+
+        if (currentTrail != null)
+        {
+            
+            currentTrail.transform.position = hit.point + (hit.normal * 0.02f);
+            
+
+            currentTrail.transform.rotation = Quaternion.LookRotation(transform.forward, hit.normal);
+        }
+    }
+}
 
 
 
