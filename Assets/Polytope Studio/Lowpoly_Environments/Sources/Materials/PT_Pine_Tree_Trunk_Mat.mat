@@ -124,9 +124,9 @@ Material:
     - _WINDTRUNKMASKONOFF: 1
     - _WindDensity: 0.01
     - _WindDensity1: 0.2
-    - _WindMovement: 10
+    - _WindMovement: 0
     - _WindMovement1: 0.5
-    - _WindStrength: 1
+    - _WindStrength: 0
     - _WindStrength1: 0.3
     - _ZWrite: 1
     - __dirty: 0
