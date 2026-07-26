@@ -1,8 +1,11 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GameMaster : MonoBehaviour
 {
+     [SerializeField] private Animator fadeAnim;
     [SerializeField] private TextMeshProUGUI countdown;
     [SerializeField] private float startingTime = 90.00f;
 
@@ -128,6 +131,16 @@ public class GameMaster : MonoBehaviour
 
     void OnTimerEnd()
     {
-
+        StartCoroutine(LoadGame("Lose"));
     }
+
+
+    IEnumerator LoadGame(string scene)
+    {
+        
+        fadeAnim.SetTrigger("FadeOut");
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(scene);
+    }
+    
 }

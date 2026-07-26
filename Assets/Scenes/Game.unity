@@ -1670,6 +1670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dde0ed449d943d745a2d3956a1a7921d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameMaster
+  fadeAnim: {fileID: 192349827}
   countdown: {fileID: 1769615112}
   startingTime: 90
   regularFontSize: 80
@@ -3616,6 +3617,10 @@ PrefabInstance:
     - target: {fileID: 8771091787928289351, guid: af8db1818ba5f7e4789f759caf95d34d, type: 3}
       propertyPath: m_Name
       value: catB
+      objectReference: {fileID: 0}
+    - target: {fileID: 8771091787928289351, guid: af8db1818ba5f7e4789f759caf95d34d, type: 3}
+      propertyPath: m_TagString
+      value: Finish
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27322,6 +27327,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3557694955480225060, guid: 0d09e700b9180344786edef1462240d3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2109185146}
+    - targetCorrespondingSourceObject: {fileID: 3557694955480225060, guid: 0d09e700b9180344786edef1462240d3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2109185147}
   m_SourcePrefab: {fileID: -4161369568681901532, guid: 0d09e700b9180344786edef1462240d3, type: 3}
 --- !u!1 &2109185138 stripped
 GameObject:
@@ -27478,6 +27486,19 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &2109185147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109185138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efa10947f8b06b74eb169d6dfb75a67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  fadeAnim: {fileID: 192349827}
 --- !u!4 &2119209022 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6098950450531741806, guid: b8ef4d8554bd0a0448b51933d8965302, type: 3}
