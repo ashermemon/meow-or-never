@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class LocationIcon : MonoBehaviour
 {
-    [Header("Rotation Settings")]
+
     [SerializeField] private float rotationSpeed = 50f;
 
-    [Header("Hover Settings")]
+
     [SerializeField] private float hoverSpeed = 2f;   
     [SerializeField] private float hoverAmount = 0.2f; 
 
