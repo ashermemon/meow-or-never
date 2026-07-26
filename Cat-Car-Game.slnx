@@ -1,7 +1,7 @@
 ﻿<Solution>
+  <Project Path="Assembly-CSharp.csproj" />
   <Project Path="JonasWischeropp.Unity.EditorTools.SceneView.PieMenu.csproj" />
   <Project Path="Assembly-CSharp-Editor.csproj" />
-  <Project Path="Assembly-CSharp.csproj" />
   <Project Path="Unity.UnityBlenderControl.Editor.csproj" />
   <Project Path="UnityWakatime.csproj" />
 </Solution>
