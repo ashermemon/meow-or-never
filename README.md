@@ -35,6 +35,8 @@ CliffStonePackM (Dzeruza) for the rocky cliffs near the center of the map
 
 Music Credit: http://www.crazyduckgames.de (crazy duck games) 
 
+Documented on HackClub Stardance! Thank you!!!
+
 ### Screenshots:
 
 <img width="2209" height="1234" alt="Screenshot 2026-07-26 025103" src="https://github.com/user-attachments/assets/310eb1df-8d1b-4b27-8ca1-e3c849618774" />
